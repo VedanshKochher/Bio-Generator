@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios"
 
-const api_key="your api key"
+
+const api_key="your api key";
 
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
     setLoading(true);
 
     const url = 'https://api.openai.com/v1/chat/completions';
-    const apiKey = api_key
+    const apiKey = api_key // Replace with your OpenAI API key
   
     const data = {
       model: 'gpt-4',
@@ -31,7 +32,7 @@ const App = () => {
        
         {
           role: 'user',
-          content: `Generate a bio for a dating app in about 50 words , using this information : ${bio} and the nature of the bio should be based on the tone ${tone}`,
+          content: `Generate 4 similar bio for a dating app in about 50 words and give the numbering in front of each one, using this information : ${bio} and the nature of the bio should be based on the tone ${tone}`,
           
         }
       ],
